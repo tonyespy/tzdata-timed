@@ -52,7 +52,8 @@ find-aliases: process-zones list-zones-without-links
 	perl -w -s $(SCRIPTS_DIR)/find-aliases.perl \
 	-zones=$(BUILD_DIR)/zone.list -signatures=$(BUILD_DIR)/signatures \
 	-md5sum=$(BUILD_DIR)/md5sum -links=$(BUILD_DIR)/zone.link \
-	-zonetab=/usr/share/zoneinfo/zone.tab > $(BUILD_DIR)/zone.alias
+	-zonetab=$(SRC_DIR)/zone.tab > $(BUILD_DIR)/zone.alias
+#	-zonetab=/usr/share/zoneinfo/zone.tab > $(BUILD_DIR)/zone.alias
 
 prepare-timed-data: find-aliases
 	$(SCRIPTS_DIR)/prepare-timed-data.perl \

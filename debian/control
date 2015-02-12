@@ -1,0 +1,15 @@
+Source: tzdata-timed
+Section: misc
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Petri M. Gerdt <petri.gerdt@jollamobile.com>
+Build-Depends: debhelper (>= 9),
+ perl (>= 2.3000)
+Standards-Version: 3.9.5
+
+Package: tzdata-timed
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: timezone database files
+ This package includes a set of timezone database files used by timed.
+
